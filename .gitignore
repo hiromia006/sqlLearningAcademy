@@ -1,0 +1,5 @@
+# ignore
+/.gradle/
+/.idea/
+/build/
+/test-output/
