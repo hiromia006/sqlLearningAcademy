@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<suite name="est XML">
+    <test name="RRegex">
+        <classes>
+            <class name="com.sqlLearningAcademy.testng.batchTwo.practices.ExcludeIncludeTest">
+                <methods>
+                    <include name="login.*"/>
+                </methods>
+
+            </class>
+        </classes>
+    </test>
+</suite>
