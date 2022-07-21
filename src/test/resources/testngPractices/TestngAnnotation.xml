@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Annotation">
+    <test name="Test Annotation">
+        <classes>
+            <class name="com.sqlLearningAcademy.testng.batchTwo.practices.TestngTest"/>
+            <class name="com.sqlLearningAcademy.testng.batchTwo.practices.TestngAnnotationTest"/>
+        </classes>
+    </test>
+</suite>

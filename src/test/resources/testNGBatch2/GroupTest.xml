@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="est Group">
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+    <test name="Test Group">
+        <packages>
+            <package name="com.sqlLearningAcademy.testng.batchTwo.classes.*"/>
+        </packages>
+    </test>
+</suite>

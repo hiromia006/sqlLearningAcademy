@@ -1,29 +1,29 @@
-package com.sqlLearningAcademy.testng.batchTwo.practices;
+package com.sqlLearningAcademy.testng.batchTwo.classes;
 
 import org.testng.annotations.Test;
 
 public class GroupsTest {
-    @Test(groups = "smoke", enabled = false)
+    @Test(priority = 0, groups = "smoke, regression")
     public void createMemberShouldSucceed() {
         System.out.println("Member is created successfully");
     }
 
-    @Test(timeOut = 1)
+    @Test(priority = 1)
     public void createMemberWithRequiredFieldsShouldSucceed() {
         System.out.println("Member is created successfully");
     }
 
-    @Test
+    @Test(priority = 2, description="slafjlasskjflksaj", dependsOnGroups = "createMemberShouldSucceed")
     public void createMemberWithOutRequiredFilesFail() {
         System.out.println("Member is created Fail");
     }
 
-    @Test(groups = "smoke")
+    @Test(priority = 3, groups = "smoke")
     public void updateMemberShouldSucceed() {
         System.out.println("Member update successfully");
     }
 
-    @Test(groups = "smoke")
+    @Test(priority = 3, groups = "smoke")
     public void deleteMemberShouldSucceed() {
         System.out.println("Member update successfully");
     }
