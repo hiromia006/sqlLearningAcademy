@@ -38,7 +38,6 @@ public class BaseTest {
         driver = new FirefoxDriver();
         driver.get(properties.getProperty("baseUrl"));
 
-        driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(GeneralUtil.PAGE_LOAD_TIME));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GeneralUtil.IMPLICIT_WAIT));
@@ -48,6 +47,7 @@ public class BaseTest {
         webElement.isDisplayed();
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", webElement);
+
         GeneralUtil.waitForDomStable();
         webElement.click();
     }

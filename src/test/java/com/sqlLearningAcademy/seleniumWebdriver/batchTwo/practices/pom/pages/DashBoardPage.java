@@ -10,6 +10,9 @@ public class DashBoardPage extends BaseTest {
     @FindBy(css = "ul > li a[href$='logout.htm']")
     WebElement logout;
 
+    @FindBy(css = "ul > li a[href$='openaccount.htm']")
+    WebElement openAccount;
+
     public DashBoardPage() {
         PageFactory.initElements(driver, this);
     }
@@ -18,4 +21,10 @@ public class DashBoardPage extends BaseTest {
         GeneralUtil.waitForDomStable();
         return logout.isDisplayed();
     }
+
+    public OpenNewAccountPage clickOpenAccount() {
+        scrollToElementAndClick(openAccount);
+        return new OpenNewAccountPage();
+    }
+
 }

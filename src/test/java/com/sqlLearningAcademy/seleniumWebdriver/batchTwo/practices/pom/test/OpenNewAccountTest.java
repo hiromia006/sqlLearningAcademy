@@ -2,33 +2,37 @@ package com.sqlLearningAcademy.seleniumWebdriver.batchTwo.practices.pom.test;
 
 import com.sqlLearningAcademy.seleniumWebdriver.batchTwo.practices.pom.base.BaseTest;
 import com.sqlLearningAcademy.seleniumWebdriver.batchTwo.practices.pom.pages.CustomerLoginPage;
-import com.sqlLearningAcademy.seleniumWebdriver.batchTwo.practices.pom.pages.DashBoardPage;
+import com.sqlLearningAcademy.seleniumWebdriver.batchTwo.practices.pom.pages.OpenNewAccountPage;
 import com.sqlLearningAcademy.seleniumWebdriver.batchTwo.practices.pom.util.GeneralUtil;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BaseTest {
-    DashBoardPage dashBoardPage;
-    CustomerLoginPage loginPage;
+public class OpenNewAccountTest extends BaseTest {
+    OpenNewAccountPage openNewAccountPage;
 
-    public LoginTest() {
+    public OpenNewAccountTest() {
         super();
     }
 
     @BeforeMethod
     public void setUp() {
         initialization();
-        loginPage = new CustomerLoginPage();
+        openNewAccountPage = new CustomerLoginPage()
+                .login(getUsername(), getPassword())
+                .clickOpenAccount();
+
     }
 
     @Test
-    public void loginShouldSucceed() {
-        dashBoardPage = loginPage.login(getUsername(), getPassword());
-        Assert.assertTrue(dashBoardPage.hasLogoutLink());
+    public void openNewAccountShouldSucceed() {
+        openNewAccountPage = openNewAccountPage
+                .selectAccountType(0)
+                .selectFromAccountId(0)
+                .clickCreateAccount();
+        Assert.assertTrue(openNewAccountPage.hasNewAccountId());
     }
-
 
     @AfterMethod
     public void tearDown() {

@@ -30,6 +30,7 @@ public class CustomerLoginPage extends BaseTest {
 
         loginBtn.isDisplayed();
         loginBtn.click();
+
         GeneralUtil.waitForDomStable();
         return new DashBoardPage();
     }
