@@ -1,8 +1,8 @@
-package com.sqlLearningAcademy.seleniumWebdriver.batchTwo.practices.pom.util;
+package com.sqlLearningAcademy.seleniumWebdriver.batchTwo.classes.pom.util;
 
 public class GeneralUtil {
-    final static public int PAGE_LOAD_TIME = 60;
-    final public static int IMPLICIT_WAIT = 30;
+    static public int PAGE_LOAD_TIME = 60;
+    public static int IMPLICIT_WAIT = 30;
 
     public static void waitForDomStable() {
         try {

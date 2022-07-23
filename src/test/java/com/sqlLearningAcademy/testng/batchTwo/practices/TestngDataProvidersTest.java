@@ -15,12 +15,12 @@ public class TestngDataProvidersTest {
         };
     }
 
-    @Test(dataProvider = "getSumNumbers2")
+    @Test(dataProvider = "getSumNumbers")
     public void sumShouldSucceed(int a, int b) {
         System.out.println("Sum : " + (a + b));
     }
 
-    @Test(dataProvider = "getNumbers", dataProviderClass = TestngParametersTest.class)
+    @Test(dataProvider = "getNumbers", dataProviderClass =TestngParametersTest.class )
     public void subtractShouldSucceed(int a, int b) {
         System.out.println("SubtractS : " + (a - b));
     }

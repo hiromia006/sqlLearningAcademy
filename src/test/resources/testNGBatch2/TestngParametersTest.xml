@@ -1,0 +1,13 @@
+<suite name="Testng Parameters Test">
+    <parameter name="a" value="10"/>
+    <parameter name="b" value="5"/>
+
+    <test name="Testng Parameters Test">
+        <classes>
+            <class name="com.sqlLearningAcademy.testng.batchTwo.classes.TestngParametersTest">
+            </class>
+        </classes>
+
+    </test>
+
+</suite>
