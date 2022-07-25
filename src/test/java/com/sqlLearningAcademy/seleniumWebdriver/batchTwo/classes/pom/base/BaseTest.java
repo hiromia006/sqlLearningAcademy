@@ -33,11 +33,11 @@ public class BaseTest {
     public void initialization() {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
-        driver.get(properties.getProperty("baseUrl"));
-
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(GeneralUtil.PAGE_LOAD_TIME));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GeneralUtil.IMPLICIT_WAIT));
+
+        driver.get(properties.getProperty("baseUrl"));
     }
 
 

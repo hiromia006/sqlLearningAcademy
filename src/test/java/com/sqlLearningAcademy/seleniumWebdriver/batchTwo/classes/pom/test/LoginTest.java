@@ -26,7 +26,6 @@ public class LoginTest extends BaseTest {
     public void loginShouldSucceed() {
         HomePage homePage = loginPage
                 .login(getUsername(), getPassword());
-
         Assert.assertTrue(homePage.isLogoutLink());
     }
 
