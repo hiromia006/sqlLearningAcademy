@@ -22,7 +22,7 @@ public class GeneralUtil {
     }
 
     public static Object[][] getTestData(String sheetName) {
-        String TESTDATA_SHEET_PATH = System.getProperty("user.dir") + "/src/test/java/com/sqlLearningAcademy/seleniumWebdriver/batchTwo/practices/pom/testdata/FreeCrmTestData.xlsx";
+        String TESTDATA_SHEET_PATH = System.getProperty("user.dir") + "/src/test/java/com/sqlLearningAcademy/seleniumWebdriver/batchTwo/practices/pom/testdata/TestData.xlsx";
         Workbook book = null;
         Sheet sheet;
         FileInputStream file = null;

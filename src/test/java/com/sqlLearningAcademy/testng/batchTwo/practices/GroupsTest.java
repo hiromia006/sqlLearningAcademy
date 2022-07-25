@@ -31,13 +31,13 @@ public class GroupsTest {
     }
 
     @DataProvider
-    public Object[][] getCRMTestData() {
+    public Object[][] getTestData() {
         Object data[][] = GeneralUtil.getTestData("contacts");
         return data;
     }
 
 
-    @Test(priority = 4, dataProvider = "getCRMTestData")
+    @Test(priority = 4, dataProvider = "getTestData")
     public void validateCreateNewContact(String title, String firstName, String lastName, String company) {
         System.out.println(title + " " + firstName + " " + lastName + " " + company);
 
