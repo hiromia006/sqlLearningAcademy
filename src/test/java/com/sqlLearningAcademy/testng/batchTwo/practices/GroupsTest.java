@@ -1,5 +1,7 @@
 package com.sqlLearningAcademy.testng.batchTwo.practices;
 
+import com.sqlLearningAcademy.seleniumWebdriver.batchTwo.practices.pom.util.GeneralUtil;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class GroupsTest {
@@ -27,4 +29,18 @@ public class GroupsTest {
     public void deleteMemberShouldSucceed() {
         System.out.println("Member update successfully");
     }
+
+    @DataProvider
+    public Object[][] getCRMTestData() {
+        Object data[][] = GeneralUtil.getTestData("contacts");
+        return data;
+    }
+
+
+    @Test(priority = 4, dataProvider = "getCRMTestData")
+    public void validateCreateNewContact(String title, String firstName, String lastName, String company) {
+        System.out.println(title + " " + firstName + " " + lastName + " " + company);
+
+    }
+
 }
