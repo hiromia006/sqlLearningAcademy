@@ -13,6 +13,9 @@ public class HomePage extends BaseTest {
     @FindBy(css = "a[href$='openaccount.htm']")
     WebElement openAccountLink;
 
+    @FindBy(css = "a[href$='updateprofile.htm']")
+    WebElement updateProfileLink;
+
     public HomePage() {
         PageFactory.initElements(driver, this);
     }
@@ -26,5 +29,12 @@ public class HomePage extends BaseTest {
         openAccountLink.click();
         GeneralUtil.waitForDomStable();
         return new OpenNewAccountPage();
+    }
+
+    public UpdateProfilePage clickUpdateProfileLink() {
+        updateProfileLink.isDisplayed();
+        updateProfileLink.click();
+        GeneralUtil.waitForDomStable();
+        return new UpdateProfilePage();
     }
 }
