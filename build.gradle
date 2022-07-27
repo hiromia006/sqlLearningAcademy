@@ -15,8 +15,12 @@ dependencies {
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.2.1'
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.2.0'
     testImplementation 'com.relevantcodes:extentreports:2.41.2'
+    //POI
     testImplementation 'org.apache.poi:poi:5.2.2'
     testImplementation 'org.apache.poi:poi-ooxml:5.2.2'
+    //APIUM
+    testImplementation 'io.appium:java-client:8.1.1'
+
 
 
 }
