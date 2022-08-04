@@ -17,16 +17,27 @@ public class CompareLoanTest extends BaseAppiumTest {
         compareLoanPage = new HomePage().tapCompareBtn();
     }
 
-
-    @Test(dataProvider = "sajib")
-    public void compareLoanShouldSucceed(int amount1, int in1) {
+    @Test
+    public void compareLoanShouldSucceed() {
         compareLoanPage = compareLoanPage
-                .fillLoanAmount1(amount1)
-                .fillInterest1(in1)
+                .fillLoanAmount1(10000)
+                .fillInterest1(8)
                 .fillPeriod1(12)
                 .fillLoanAmount2(15000)
                 .fillInterest2(7)
                 .fillPeriod2(3)
+                .clickCalculateBtn();
+    }
+
+    @Test
+    public void resetLoanShouldSucceed() {
+        compareLoanPage = compareLoanPage
+                .fillLoanAmount1(1000)
+                .fillInterest1(9)
+                .fillPeriod1(15)
+                .fillLoanAmount2(3000)
+                .fillInterest2(7)
+                .fillPeriod2(2)
                 .clickRestBtn();
     }
 
