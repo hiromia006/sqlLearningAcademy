@@ -20,6 +20,11 @@ dependencies {
     testImplementation 'org.apache.poi:poi-ooxml:5.2.2'
     //APIUM
     testImplementation 'io.appium:java-client:8.1.1'
+
+    //Rest Assured
+    testImplementation 'io.rest-assured:rest-assured:5.1.1'
+    testImplementation 'io.rest-assured:json-path:5.1.1'
+    testImplementation 'io.rest-assured:xml-path:5.1.1'
 }
 
 test {
