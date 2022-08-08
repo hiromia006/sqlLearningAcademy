@@ -10,21 +10,36 @@ repositories {
 }
 
 dependencies {
+    //TestNG
     testImplementation 'org.testng:testng:7.5'
+
+    //dummy Text
     testImplementation 'com.thedeanda:lorem:2.1'
+
+    //Selenium
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.2.1'
+
+    //Browser
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.2.0'
+
+    //Extent Report
     testImplementation 'com.relevantcodes:extentreports:2.41.2'
+
     //POI
     testImplementation 'org.apache.poi:poi:5.2.2'
     testImplementation 'org.apache.poi:poi-ooxml:5.2.2'
-    //APIUM
+
+    //APPIUM
     testImplementation 'io.appium:java-client:8.1.1'
 
     //Rest Assured
     testImplementation 'io.rest-assured:rest-assured:5.1.1'
     testImplementation 'io.rest-assured:json-path:5.1.1'
     testImplementation 'io.rest-assured:xml-path:5.1.1'
+
+    // JSON
+    testImplementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
 }
 
 test {
