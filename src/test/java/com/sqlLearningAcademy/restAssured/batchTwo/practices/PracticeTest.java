@@ -2,9 +2,7 @@ package com.sqlLearningAcademy.restAssured.batchTwo.practices;
 
 import com.sqlLearningAcademy.restAssured.batchTwo.classes.baseTest.BaseTest;
 import com.thedeanda.lorem.LoremIpsum;
-import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
-import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
