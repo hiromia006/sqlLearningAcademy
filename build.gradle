@@ -40,6 +40,9 @@ dependencies {
     // JSON
     testImplementation 'com.googlecode.json-simple:json-simple:1.1.1'
 
+    //Karate
+    testImplementation 'com.intuit.karate:karate-junit5:1.2.0'
+
 }
 
 test {
