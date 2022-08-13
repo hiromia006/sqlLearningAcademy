@@ -24,7 +24,7 @@ public class AuthorizationTypeTest {
                 .contentType(ContentType.JSON)
                 .log().uri()
                 .when()
-                .get("https://erpdevelopment.brac.net/node/scapir/VOListModified?BranchCode=2332&ProjectCode=015&UpdatedAt=2022-01-01 01:01:59&BusinessDate=2022-03-16&key=5d0a4a85-df7a-scapi-bits-93eb-145f6a9902ae")
+                .get("https://localhost/node/scapir/VOListModified?BranchCode=2332&ProjectCode=015&UpdatedAt=2022-01-01 01:01:59&BusinessDate=2022-03-16&key=5d0a4a85-df7a-scapi-bits-93eb-145f6a9902ae")
                 .then()
                 .statusCode(200)
                 .log().body();
@@ -37,7 +37,7 @@ public class AuthorizationTypeTest {
                 .contentType(ContentType.JSON)
                 .log().uri()
                 .when()
-                .get("https://erpdevelopment.brac.net/node/scapir/VOListModified?BranchCode=2332&ProjectCode=015&UpdatedAt=2022-01-01 01:01:59&BusinessDate=2022-03-16&key=5d0a4a85-df7a-scapi-aaaa-93eb-145f6a9902ae")
+                .get("https://localhost/node/scapir/VOListModified?BranchCode=2332&ProjectCode=015&UpdatedAt=2022-01-01 01:01:59&BusinessDate=2022-03-16&key=5d0a4a85-df7a-scapi-aaaa-93eb-145f6a9902ae")
                 .then()
                 .statusCode(401);
 
