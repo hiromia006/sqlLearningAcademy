@@ -43,6 +43,9 @@ dependencies {
     //Karate
     testImplementation 'com.intuit.karate:karate-junit5:1.2.0'
 
+    //OWASP ZAP
+    testImplementation 'org.zaproxy:zap-clientapi:1.10.0'
+
 }
 
 test {
