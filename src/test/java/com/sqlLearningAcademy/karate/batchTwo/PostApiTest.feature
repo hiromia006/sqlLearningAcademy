@@ -11,7 +11,7 @@ Feature: Post Api
     Then status 201
     And print response
 
-  Scenario: Create user2
+  Scenario: Create user3
     Given path '/users'
     And request someJson = read('createUser.json')
     When method post
