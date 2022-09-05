@@ -89,6 +89,23 @@ public class AuthorizationTypeTest {
     }
 
     @Test
+    public void bearerToken2(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("email", "superman@gmail.com");
+        jsonObject.put("password", "123456");
+
+
+        given()
+                .body(jsonObject)
+                .contentType(ContentType.JSON)
+                .log().uri()
+                .when()
+                .post("/login")
+                .then()
+                .log().body();
+    }
+
+    @Test
     public void getArticlesShouldSucceed() {
         given()
                 .contentType(ContentType.JSON)
