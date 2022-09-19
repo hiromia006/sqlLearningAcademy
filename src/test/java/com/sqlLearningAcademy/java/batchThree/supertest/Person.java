@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batchTwo.practices.supertest;
+package com.sqlLearningAcademy.java.batchThree.supertest;
 
 public class Person {
     int id;
