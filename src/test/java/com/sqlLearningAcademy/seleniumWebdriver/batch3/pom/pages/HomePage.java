@@ -11,11 +11,29 @@ public class HomePage extends ParaBankBaseTest {
     @FindBy(css = "a[href$='logout.htm']")
     List<WebElement> logoutLink;
 
+    @FindBy(css = "a[href$='openaccount.htm']")
+    WebElement openAccountBtn;
+
+    @FindBy(css = "a[href$='transfer.htm']")
+    WebElement transferBtn;
+
     public HomePage() {
         PageFactory.initElements(driver, this);
     }
 
     public boolean isLogoutLink() {
         return logoutLink.size() > 0;
+    }
+
+    public OpenAccountPage clickOpenAccountLink() {
+        openAccountBtn.isDisplayed();
+        openAccountBtn.click();
+        return new OpenAccountPage();
+    }
+
+    public TransferFundsPage clickTransferLink() {
+        transferBtn.isDisplayed();
+        transferBtn.click();
+        return new TransferFundsPage();
     }
 }

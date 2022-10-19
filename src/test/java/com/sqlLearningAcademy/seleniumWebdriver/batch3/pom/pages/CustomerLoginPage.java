@@ -50,4 +50,11 @@ public class CustomerLoginPage extends ParaBankBaseTest {
     public boolean hasErrorMessage() {
         return error.size() > 0;
     }
+
+    public HomePage login(String username, String password) {
+        fillUsername(username);
+        fillPassword(password);
+        clickLoginBtn();
+        return new HomePage();
+    }
 }
