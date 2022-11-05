@@ -1,5 +1,6 @@
 package com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.testcases;
 
+import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.baseTest.EmiCalculatorBaseTest;
 import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.pages.CompareLoanPage;
 import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.pages.LandingPage;
 import org.testng.annotations.BeforeClass;

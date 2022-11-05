@@ -1,6 +1,6 @@
 package com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.pages;
 
-import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.testcases.EmiCalculatorBaseTest;
+import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.baseTest.EmiCalculatorBaseTest;
 import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.util.GeneralUtil;
 import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

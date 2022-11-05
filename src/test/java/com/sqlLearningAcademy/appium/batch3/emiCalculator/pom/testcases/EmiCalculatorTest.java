@@ -1,7 +1,9 @@
 package com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.testcases;
 
+import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.baseTest.EmiCalculatorBaseTest;
 import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.pages.EmiCalculatorPage;
 import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.pages.LandingPage;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -23,6 +25,7 @@ public class EmiCalculatorTest extends EmiCalculatorBaseTest {
                 .fillMonths(7)
                 .fillProcessFee(2)
                 .tapBtnCalculate();
+        Assert.assertEquals("1,686.31", emiCalculatorPage.getMonthlyEmi());
     }
 
     @Test

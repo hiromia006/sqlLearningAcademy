@@ -1,7 +1,7 @@
 package com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.pages;
 
 
-import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.testcases.EmiCalculatorBaseTest;
+import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.baseTest.EmiCalculatorBaseTest;
 import com.sqlLearningAcademy.appium.batch3.emiCalculator.pom.util.GeneralUtil;
 import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -34,6 +34,9 @@ public class EmiCalculatorPage extends EmiCalculatorBaseTest {
 
     @AndroidBy(id = "btnDetail")
     WebElement btnDetail;
+
+    @AndroidBy(id = "monthly_emi_result")
+    WebElement monthly_emi_result;
 
     public EmiCalculatorPage() {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(GeneralUtil.LOAD_TIME)), this);
@@ -90,5 +93,10 @@ public class EmiCalculatorPage extends EmiCalculatorBaseTest {
         btnDetail.isDisplayed();
         btnDetail.click();
         return new EmiDetailPage();
+    }
+
+    public String getMonthlyEmi() {
+        monthly_emi_result.isDisplayed();
+        return monthly_emi_result.getText().trim();
     }
 }
