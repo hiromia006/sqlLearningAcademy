@@ -46,6 +46,9 @@ dependencies {
     //OWASP ZAP
     testImplementation 'org.zaproxy:zap-clientapi:1.10.0'
 
+    // Pojo class
+    testImplementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.2.2'
+
 }
 
 test {
