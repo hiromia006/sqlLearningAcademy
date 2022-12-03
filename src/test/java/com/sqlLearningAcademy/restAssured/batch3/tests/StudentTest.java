@@ -1,5 +1,8 @@
 package com.sqlLearningAcademy.restAssured.batch3.tests;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sqlLearningAcademy.restAssured.batch3.tests.pojo.Student;
 import com.thedeanda.lorem.LoremIpsum;
 import io.restassured.http.ContentType;
 import org.json.simple.JSONObject;
@@ -10,7 +13,7 @@ import java.util.HashMap;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class Students extends BaseTest {
+public class StudentTest extends BaseTest {
 
     @Test
     public void getStudentShouldSucceed() {
@@ -53,18 +56,25 @@ public class Students extends BaseTest {
         studentJson.put("name", LoremIpsum.getInstance().getName());
         studentJson.put("contactNo", LoremIpsum.getInstance().getPhone());
 
-        System.out.println(studentJson);
+        String json;
+        try {
+             json = new ObjectMapper().writeValueAsString(studentJson);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println(json);
 
         given()
                 .contentType(ContentType.JSON)
                 .header("Content-Type", "application/json")
-                .body(studentJson.toString())
+                .body(json)
                 .log().uri()
                 .log().body()
                 .when()
                 .post("/students")
                 .then()
-                .statusCode(200)
+                .statusCode(201)
                 .log().body();
     }
 
@@ -251,6 +261,21 @@ public class Students extends BaseTest {
                 .when()
                 .delete("/students/" + studentId)
                 .then()
+                .log().body();
+    }
+
+    @Test
+    public void createStudentPojoShouldSucceed() {
+        given()
+                .contentType(ContentType.JSON)
+                .header("Content-Type", "application/json")
+                .body(new Student(LoremIpsum.getInstance().getName(),1, LoremIpsum.getInstance().getPhone() ))
+                .log().uri()
+                .log().body()
+                .when()
+                .post("/students")
+                .then()
+                .statusCode(201)
                 .log().body();
     }
 }
