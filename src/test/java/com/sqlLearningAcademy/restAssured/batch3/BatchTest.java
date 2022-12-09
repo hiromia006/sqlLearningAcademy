@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.restAssured.batch3.tests;
+package com.sqlLearningAcademy.restAssured.batch3;
 
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
@@ -26,5 +26,6 @@ public class BatchTest extends BaseTest {
                 .then()
                 .statusCode(200);
     }
+
 
 }

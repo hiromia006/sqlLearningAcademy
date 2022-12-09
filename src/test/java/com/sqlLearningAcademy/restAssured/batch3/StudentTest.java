@@ -1,8 +1,8 @@
-package com.sqlLearningAcademy.restAssured.batch3.tests;
+package com.sqlLearningAcademy.restAssured.batch3;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sqlLearningAcademy.restAssured.batch3.tests.pojo.Student;
+import com.sqlLearningAcademy.restAssured.batch3.pojo.Student_2;
 import com.thedeanda.lorem.LoremIpsum;
 import io.restassured.http.ContentType;
 import org.json.simple.JSONObject;
@@ -58,7 +58,7 @@ public class StudentTest extends BaseTest {
 
         String json;
         try {
-             json = new ObjectMapper().writeValueAsString(studentJson);
+            json = new ObjectMapper().writeValueAsString(studentJson);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
@@ -269,7 +269,7 @@ public class StudentTest extends BaseTest {
         given()
                 .contentType(ContentType.JSON)
                 .header("Content-Type", "application/json")
-                .body(new Student(LoremIpsum.getInstance().getName(),1, LoremIpsum.getInstance().getPhone() ))
+                .body(new Student_2(LoremIpsum.getInstance().getName(), 1, LoremIpsum.getInstance().getPhone()))
                 .log().uri()
                 .log().body()
                 .when()

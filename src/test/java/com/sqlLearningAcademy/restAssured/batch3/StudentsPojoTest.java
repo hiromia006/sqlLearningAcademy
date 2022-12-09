@@ -1,6 +1,6 @@
-package com.sqlLearningAcademy.restAssured.batch3.tests;
+package com.sqlLearningAcademy.restAssured.batch3;
 
-import com.sqlLearningAcademy.restAssured.batch3.tests.pojo.Student;
+import com.sqlLearningAcademy.restAssured.batch3.pojo.Student;
 import com.thedeanda.lorem.LoremIpsum;
 import org.testng.annotations.Test;
 
@@ -36,7 +36,8 @@ public class StudentsPojoTest extends BaseTest {
                 .extract().jsonPath().getList("", Student.class);
 
         for (Student student : students) {
-            System.out.println("Student name: " + student.getName() + " Phone " + student.getContactNo());
+            System.out.println("Student name: "+student.getName() +" Phone "+student.getContactNo());
+            System.out.println("Student name: "+student.getContactNo());
         }
     }
 }

@@ -1,23 +1,21 @@
-package com.sqlLearningAcademy.restAssured.batch3.tests.pojo;
-
+package com.sqlLearningAcademy.restAssured.batch3.pojo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Student {
-    @JsonProperty("name")
-    private String name;
-
     @JsonProperty("batchId")
     private Integer batchId;
+
+    @JsonProperty("name")
+    private String name;
 
     @JsonProperty("contactNo")
     private String contactNo;
 
     @JsonProperty("id")
     private Integer id;
-
 
     /**
      * No args constructor for use in serialization
@@ -31,11 +29,10 @@ public class Student {
      * @param contactNo
      */
     public Student(Integer batchId, String name, String contactNo) {
-        this.name = name;
         this.batchId = batchId;
+        this.name = name;
         this.contactNo = contactNo;
     }
-
 
     public Student(Integer batchId, String name, String contactNo, Integer id) {
         this.batchId = batchId;
@@ -59,5 +56,4 @@ public class Student {
     public Integer getId() {
         return id;
     }
-
 }
