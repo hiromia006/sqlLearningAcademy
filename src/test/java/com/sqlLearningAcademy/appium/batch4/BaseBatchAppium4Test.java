@@ -1,6 +1,7 @@
 package com.sqlLearningAcademy.appium.batch4;
 
-import com.appium.batch4.pom.util.GeneralAppiumBatch4;
+
+import com.sqlLearningAcademy.appium.batch4.pom.util.GeneralAppiumBatch4;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;

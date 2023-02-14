@@ -1,6 +1,7 @@
 package com.sqlLearningAcademy.appium.batch4.pom.util;
 
-import com.appium.batch4.pom.BaseEmiCalculatorAppiumBatch4Test;
+
+import com.sqlLearningAcademy.appium.batch4.pom.BaseEmiCalculatorAppiumBatch4Test;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
