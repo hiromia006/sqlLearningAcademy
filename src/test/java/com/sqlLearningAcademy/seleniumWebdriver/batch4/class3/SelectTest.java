@@ -32,7 +32,5 @@ public class SelectTest {
         }
 
         driver.quit();
-
-
     }
 }
