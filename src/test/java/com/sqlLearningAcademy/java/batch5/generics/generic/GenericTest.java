@@ -1,6 +1,5 @@
 package com.sqlLearningAcademy.java.batch5.generics.generic;
 
-import com.practice.batch5.abstraction.interface1.Circle;
 
 public class GenericTest {
     public static void main(String[] args) {
@@ -13,8 +12,6 @@ public class GenericTest {
         Generic<Double> doubleGeneric = new Generic<>(6512.50);
         System.out.println(doubleGeneric.getObj());
 
-        Generic<Circle> circleGeneric = new Generic<>(new Circle());
-        System.out.println(circleGeneric.getObj());
 
     }
 }
