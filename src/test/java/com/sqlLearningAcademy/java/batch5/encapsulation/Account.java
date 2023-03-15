@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batch5.inheritance.encapsulation;
+package com.sqlLearningAcademy.java.batch5.encapsulation;
 
 // Fully Encapsulation
 public class Account {

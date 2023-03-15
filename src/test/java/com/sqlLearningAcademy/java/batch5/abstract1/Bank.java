@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batch5.inheritance.abstract1;
+package com.sqlLearningAcademy.java.batch5.abstract1;
 
 public abstract class Bank {
     abstract double getInterestRate();

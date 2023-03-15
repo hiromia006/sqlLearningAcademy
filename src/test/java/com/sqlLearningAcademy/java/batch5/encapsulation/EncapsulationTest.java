@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batch5.inheritance.encapsulation;
+package com.sqlLearningAcademy.java.batch5.encapsulation;
 
 public class EncapsulationTest {
     public static void main(String[] args) {
