@@ -1,6 +1,9 @@
 package com.sqlLearningAcademy.seleniumWebdriver.batch5.pom;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -8,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -86,6 +90,16 @@ public abstract class BaseBatch5ParaBankTest {
     public void tearDown() throws InterruptedException {
         Thread.sleep(8000);
         driver.quit();
+    }
+
+    public static void takeScreenshot(String fileName) {
+        try {
+            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            String currentDir = System.getProperty("user.dir") + "/build/screenshots/";
+            FileUtils.copyFile(scrFile, new File(currentDir + fileName + System.currentTimeMillis() + ".png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
