@@ -1,5 +1,6 @@
 package com.sqlLearningAcademy.seleniumWebdriver.batch5.pom;
 
+import com.sqlLearningAcademy.seleniumWebdriver.batch5.pom.util.GeneralUtil;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -8,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
@@ -44,7 +44,7 @@ public abstract class BaseBatch5ParaBankTest {
         String browserName = getBrowserName();
         if (browserName.equals("firefox")) {
             //logging disable
-            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
+            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
 
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -53,8 +53,8 @@ public abstract class BaseBatch5ParaBankTest {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         } else if (browserName.equals("headless")) {
-                //disable Firefox logging
-            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
+            //disable Firefox logging
+            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
 
             WebDriverManager.firefoxdriver().setup();
             //headless
@@ -65,7 +65,7 @@ public abstract class BaseBatch5ParaBankTest {
 
         }
         driver.get(getBaseUrl());
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GeneralUtil.WAIT_TIME));
         driver.manage().window().maximize();
 
     }
@@ -86,11 +86,11 @@ public abstract class BaseBatch5ParaBankTest {
         return properties.getProperty("browserName");
     }
 
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(8000);
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown() throws InterruptedException {
+//        Thread.sleep(8000);
+//        driver.quit();
+//    }
 
     public static void takeScreenshot(String fileName) {
         try {
