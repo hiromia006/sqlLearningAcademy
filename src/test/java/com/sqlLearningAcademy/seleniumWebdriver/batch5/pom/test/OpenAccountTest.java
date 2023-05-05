@@ -8,6 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class OpenAccountTest extends BaseBatch5ParaBankTest {
+//    LoginPage loginPage;
+//    HomePage homePage;
+//    OpenAccountPage openAccountPage;
 
     public OpenAccountTest() {
         super();
@@ -15,6 +18,17 @@ public class OpenAccountTest extends BaseBatch5ParaBankTest {
 
     @Test
     public void openAccountShouldSucceed() {
+//        loginPage = new LoginPage();
+//
+//        homePage = loginPage
+//                .fillUsername(getUsername())
+//                .fillPassword(getPassword())
+//                .clickLoginBtn();
+//
+//        openAccountPage=homePage
+//                .clickOpenAccountLink()
+//                .clickOpenNewAccountBtn();
+//        Assert.assertTrue(openAccountPage.hasNewAccountId());
 
         OpenAccountPage openAccountPage = new LoginPage()
                 .fillUsername(getUsername())
