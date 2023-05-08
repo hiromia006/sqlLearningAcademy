@@ -1,6 +1,6 @@
 package com.sqlLearningAcademy.appium.batch5.pom.pages;
 
-import com.emi.calculator.pom.BaseAppiumBatch5Test;
+import com.sqlLearningAcademy.appium.batch5.pom.BaseAppiumBatch5Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

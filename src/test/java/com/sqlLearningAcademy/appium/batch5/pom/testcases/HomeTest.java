@@ -1,7 +1,8 @@
 package com.sqlLearningAcademy.appium.batch5.pom.testcases;
 
-import com.emi.calculator.pom.BaseAppiumBatch5Test;
-import com.emi.calculator.pom.pages.LandingPage;
+
+import com.sqlLearningAcademy.appium.batch5.pom.BaseAppiumBatch5Test;
+import com.sqlLearningAcademy.appium.batch5.pom.pages.LandingPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

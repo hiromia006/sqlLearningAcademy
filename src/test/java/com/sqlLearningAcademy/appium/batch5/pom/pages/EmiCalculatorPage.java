@@ -1,7 +1,8 @@
 package com.sqlLearningAcademy.appium.batch5.pom.pages;
 
-import com.emi.calculator.pom.BaseAppiumBatch5Test;
-import com.emi.calculator.pom.util.General;
+
+import com.sqlLearningAcademy.appium.batch5.pom.BaseAppiumBatch5Test;
+import com.sqlLearningAcademy.appium.batch5.pom.util.General;
 import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
@@ -40,6 +41,7 @@ public class EmiCalculatorPage extends BaseAppiumBatch5Test {
     //btnDetail
     @FindBy(id = "btnDetail")
     List<WebElement> btnDetail;
+
     public EmiCalculatorPage() {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(General.WAIT_TIME)), this);
     }
