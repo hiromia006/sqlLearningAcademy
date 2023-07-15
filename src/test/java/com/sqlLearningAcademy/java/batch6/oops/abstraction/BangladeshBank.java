@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batch6.class5.abstraction;
+package com.sqlLearningAcademy.java.batch6.oops.abstraction;
 
 public abstract class BangladeshBank {
     abstract public double getInterestRate();

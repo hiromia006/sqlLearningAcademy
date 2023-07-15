@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batch6.class5.inheritance;
+package com.sqlLearningAcademy.java.batch6.oops.inheritance;
 
 public class Audi extends Car {
 

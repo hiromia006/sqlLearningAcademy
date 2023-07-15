@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batch6.class5.interface1;
+package com.sqlLearningAcademy.java.batch6.oops.interface1;
 
 public class Rectangle implements Drawable {
     @Override

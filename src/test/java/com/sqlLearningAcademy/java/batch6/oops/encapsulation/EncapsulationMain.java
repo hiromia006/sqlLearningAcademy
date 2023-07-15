@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batch6.class5.encapsulation;
+package com.sqlLearningAcademy.java.batch6.oops.encapsulation;
 
 public class EncapsulationMain {
     public static void main(String[] args) {

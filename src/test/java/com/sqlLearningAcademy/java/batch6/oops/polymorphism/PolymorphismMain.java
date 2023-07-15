@@ -1,4 +1,4 @@
-package com.sqlLearningAcademy.java.batch6.class5.polymorphism;
+package com.sqlLearningAcademy.java.batch6.oops.polymorphism;
 
 public class PolymorphismMain {
     public static void main(String[] args) {
